@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rentals</title>
+  </head>
+  <body>
+
+
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h1>ACME Car Rentals</h1>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+        </div>
+        <form>
+          <div class="mb-3">
+            <label for="Pickup date:" class="form-label"> Pickup date: </label>
+            <input
+              id="pickupTextbox"
+              type="textbox"
+              class="form-control max-form-control"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="Number of Days:" class="form-label">
+              Numbers of Days:
+            </label>
+            <input
+              id="numDaysTextbox"
+              type="textbox"
+              class="form-control max-form-control"
+            />
+
+            <div class="mb-3">
+              <p>Options</p>
+              <label for="Electronic Toll Tag" class="form-label"
+                >Electronic Toll Day($3.95/day)</label
+              >
+              <input id="eTollCheckbox" type="checkbox" class="form-control max-form-control" />
+              </div>
+
+              <div class="mb-3">
+              <label for="GPS" class="form-label">GPS ($2.95/day)</label>
+              <input id="gpsCheckbox" type="checkbox" class="form-control max-form-control" />
+              </div>
+
+              <div class="mb-3">
+                <label for="Roadside Assistance" class="form-label">Roadside Assistance ($2.95/day)</label>
+                <input id="roadSideCheckbox" type="checkbox" class="form-control max-form-control" />
+              </div>
+
+              <div class="mb-3">
+                <p>Under 25</p>
+                <input id="noageCheckbox" type="checkbox">No 
+                <input id="yesageCheckbox" type="checkbox">Yes
+              </div>
+
+              <div class="mb-3">
+                
+                <input id="totalcostBtn" type="button" value="Estimate Total Cost">
+              </div>
+
+              <div class="mb-3">
+                <p><label for="answer" type="textbox" value="Car Rental Price:" /></p>
+                <p>Car Rental Price:<input id="carRentalPrice" value=""></p>
+              </div>
+
+              <div class="mb-3">
+                <p><label for="answerOptions" type="textbox" value="Options:" /></p>
+                <p>Options:<input id="optionsPrice" value=""></p>
+              </div>
+
+              <div class="mb-3">
+                <p><label for="answerAgeSurcharge" type="textbox" value="25 Surcharge:" /></p>
+                <p>Under 25 Surcharge:<input id="ageSurcharge" value=""></p>
+              </div>
+
+              <div class="mb-3">
+                <p><label for="answerTotalDue" type="textbox" value="Total Due:" /></p>
+                <p>Total Due:<input id="answerTotalDue" value=""></p>
+              </div>
+              
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
