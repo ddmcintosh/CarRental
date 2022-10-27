@@ -1,105 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/style.css" rel="stylesheet">
-    <title>Car Rentals</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ACME Car Rental</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
+    <header>
+        
+    </header>
+    <main>
+        <div class="container border border-primary">
+            <h1>ACME Car Rental</h1>
+            <div class="row">
+                <div class="col">
+                    
+                    <p>Pickup date: <input type="date" id="pickupField" /></p>
+                    <p>Number of days: <input type="text" id="numberField" /></p>
+                    <fieldset>
+                    <legend>Options</legend>
+                    <input type="checkbox" id="tollTagBtn" name="tollTag" value="tolltag">
+                    <label for="tollTag">Electronic Toll Tag ($3.95/day plus tolls)</label><br>
+                    <input type="checkbox" id="gpsBtn" name="gps" value="gps">
+                    <label for="gps"> GPS ($2.95/day)</label><br>
+                    <input type="checkbox" id="roadsideBtn" name="roadside" value="roadside">
+                    <label for="roadside">Roadside Assistance ($2.95/day)</label><br>
+                    </fieldset>
+                    
+                    <fieldset>
+                    <legend>Under 25:</legend>
+                    <input type="radio" id="no" name="insurance" value="no" checked>
+                    <label for="no">No</label>
+                    <input type="radio" id="yes" name="insurance" value="yes">
+                    <label for="yes">Yes</label><br>
+                    </fieldset>
 
+                    <input type="button" id="totalBtn" value="Estimate Total Cost">
 
-
-    <div class="container-fluid" id="acmeContainer">
-      <div class="row">
-        <div class="col">
-          <h1>ACME Car Rentals</h1>
-        </div>
-        <div class="row">
-          <div class="col"></div>
-        </div>
-        <form>
-          <div class="mb-3">
-            <label for="Pickup date:" class="form-label"> Pickup date: </label>
-            <input
-              id="pickupTextbox"
-              type="date"
-              class="form-control max-form-control"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="Number of Days:" class="form-label">
-              Numbers of Days:
-            </label>
-            <input
-              id="numDaysTextbox"
-              type="textbox"
-              class="form-control max-form-control"
-            />
-            </div>
-
-            <div class="mb-3">
-              <p>Options</p>
-              <label for="Electronic Toll Tag" class="form-label"
-                >Electronic Toll Day($3.95/day)</label
-              >
-              <input id="eTollCheckbox" type="checkbox" class="form-control max-form-control" />
-              </div>
-
-              <div class="mb-3">
-              <label for="GPS" class="form-label">GPS ($2.95/day)</label>
-              <input id="gpsCheckbox" type="checkbox" class="form-control max-form-control" />
-              </div>
-
-              <div class="mb-3">
-                <label for="Roadside Assistance" class="form-label">Roadside Assistance ($2.95/day)</label>
-                <input id="roadSideCheckbox" type="checkbox" class="form-control max-form-control" />
-              </div>
-
-              <div class="mb-3">
-                <p>Under 25</p>
-                <input id="noAgeRadiobox" name="Boolean" type="radio">No 
-                <input id="yesAgeRadiobox" name="Boolean" type="radio">Yes
-              </div>
-
-              <div class="mb-3">
                 
-                <input id="totalCostBtn" type="button" value="Estimate Total Cost">
-              </div>
-
-              <!-- <div class="mb-3">
-                <p><label for="answer" type="textbox" value="Car Rental Price:" /></p>
-                <p>Car Rental Price:<input id="carRentalPrice" value=""></p>
-              </div>
-
-              <div class="mb-3">
-                <p><label for="answerOptions" type="textbox" value="Options:" /></p>
-                <p>Options:<input id="optionsPrice" value=""></p>
-              </div>
-
-              <div class="mb-3">
-                <p><label for="answerAgeSurcharge" type="textbox" value="25 Surcharge:" /></p>
-                <p>Under 25 Surcharge:<input id="ageSurcharge" value=""></p>
-              </div>
-
-              <div class="mb-3">
-                <p><label for="answerTotalDue" type="textbox" value="Total Due:" /></p>
-                <p>Total Due:<input id="answerTotalDue" value=""></p>
-              </div> -->
-              <p >Car Rental Price: <span id="carRentalPriceAnswer"></span></p>
-              <p> Option Price: <span id="optionPriceAnswer"></span></p>
-              <p >Surcharge:<span id="ageSurchargeAnswer"></span> </p>
-              <p >Total: <span id="answerTotalDue"></span></p>
-
-
-              
+                    <h6 id="rental">Car rental: </h6>
+                    <h6 id="options">Options: </h6>
+                    <h6 id="under">Under 25 surcharge: </h6>
+                    </br>
+                    <h6 id="total">Total due: </h6>
+                </div>
             </div>
-          </div>
-        </form>
-      </div>
-    </div>
+        </div>
+    </main>
+    <footer>
 
+    </footer>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>
