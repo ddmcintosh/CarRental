@@ -24,7 +24,7 @@
             <label for="Pickup date:" class="form-label"> Pickup date: </label>
             <input
               id="pickupTextbox"
-              type="textbox"
+              type="date"
               class="form-control max-form-control"
             />
           </div>
@@ -59,16 +59,16 @@
 
               <div class="mb-3">
                 <p>Under 25</p>
-                <input id="noageCheckbox" type="checkbox">No 
-                <input id="yesageCheckbox" type="checkbox">Yes
+                <input id="noAgeRadiobox" name="Boolean" type="radio">No 
+                <input id="yesAgeRadiobox" name="Boolean" type="radio">Yes
               </div>
 
               <div class="mb-3">
                 
-                <input id="totalcostBtn" type="button" value="Estimate Total Cost">
+                <input id="totalCostBtn" type="button" value="Estimate Total Cost">
               </div>
 
-              <div class="mb-3">
+              <!-- <div class="mb-3">
                 <p><label for="answer" type="textbox" value="Car Rental Price:" /></p>
                 <p>Car Rental Price:<input id="carRentalPrice" value=""></p>
               </div>
@@ -86,7 +86,13 @@
               <div class="mb-3">
                 <p><label for="answerTotalDue" type="textbox" value="Total Due:" /></p>
                 <p>Total Due:<input id="answerTotalDue" value=""></p>
-              </div>
+              </div> -->
+              <p >Car Rental Price: <span id="carRentalPriceAnswer"></span></p>
+              <p> Option Price: <span id="optionPriceAnswer"></span></p>
+              <p >Surcharge:<span id="ageSurchargeAnswer"></span> </p>
+              <p >Total: <span id="answerTotalDue"></span></p>
+
+
               
             </div>
           </div>
